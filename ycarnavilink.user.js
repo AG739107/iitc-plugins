@@ -2,11 +2,11 @@
 // @id             iitc-plugin-yahoo-CarNavi-link
 // @name           IITC plugin: yahoo CarNavi link
 // @category       Misc
-// @version        0.0.1.20200925.195100
+// @version        0.0.1.20200925.213200
 // @namespace      rawdata
 // @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
 // @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
-// @description    [iitc-2020-09-25-195100] This is the first release.
+// @description    [iitc-2020-09-25-213200] This is the first release.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -42,9 +42,10 @@ window.plugin.rawdata.setupCallback = function() {
 }
 
 window.plugin.rawdata.addLink = function(d) {
-  $('.linkdetails').append('<aside><a href="'
+  $('.linkdetails').append('<aside><a onclick="yjcarnavi://navi/select?point=current&point=35.923515,136.4225">Yカーナビ</a></aside>');
+/*  $('.linkdetails').append('<aside><a href="'
   + window.plugin.rawdata.showPortalData(window.selectedPortal)
-  + '">Yカーナビ</a></aside>');
+  + '">Yカーナビ</a></aside>'); */
 }
 
 window.plugin.rawdata.showPortalData = function(guid) {
