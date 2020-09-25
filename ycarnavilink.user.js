@@ -488,14 +488,14 @@ function wrapper(plugin_info) {
 //    window.addHook('portalDetailsUpdated', window.plugin.aurora.onPortalDetailsUpdated);
 //    window.addHook('iitcLoaded', window.plugin.aurora.registerFieldForSyncing);
 
-    $('body').on('change', '.glyph_all', function () {
-      var val = $(this).val();
-      if ($(this).prop('checked')) {
-        $('.glyph_' + val + ':not(:checked)').trigger('click');
-      } else {
-        $('.glyph_' + val + ':checked').trigger('click');
-      }
-    });
+//    $('body').on('change', '.glyph_all', function () {
+//      var val = $(this).val();
+//      if ($(this).prop('checked')) {
+//        $('.glyph_' + val + ':not(:checked)').trigger('click');
+//      } else {
+//        $('.glyph_' + val + ':checked').trigger('click');
+//      }
+//    });
   };
   // PLUGIN END //////////////////////////////////////////////////////////
 
