@@ -2,7 +2,7 @@
 // @id             iitc-plugin-yahooCarNaviLink
 // @name           IITC plugin: yahoo CarNavi Link
 // @category       Misc
-// @version        0.0.1.20200924.200000
+// @version        0.0.1.20200925.140800
 // @description    none
 // @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
 // @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
