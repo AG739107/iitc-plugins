@@ -22,12 +22,13 @@ function wrapper(plugin_info) {
 
   // Use own namespace for plugin
   window.plugin.ycarnavi = function () {};
-  
+
+  var linkDetails2 = [];
   var permalinkUrl2 = '/intel?ll='+lat+','+lng+'&z=17&pll='+lat+','+lng;
 
   // non-android - a permalink for the portal
   var permaHtml2 = $('<div>').html( $('<a>').attr({href:permalinkUrl, title:'Create a URL link to this portal'}).text('ポータルへリンク2') ).html();
-  linkDetails.push ( '<aside>'+permaHtml+'</aside>' );
+  linkDetails2.push ( '<aside>'+permaHtml+'</aside>' );
 
   // PLUGIN END //////////////////////////////////////////////////////////
 
