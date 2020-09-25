@@ -483,7 +483,7 @@ function wrapper(plugin_info) {
   var setup = function () {
     window.plugin.aurora.setupCSS();
     window.plugin.aurora.setupContent();
-    window.plugin.aurora.loadLocal('glyphed');
+//    window.plugin.aurora.loadLocal('glyphed');
 //    window.addPortalHighlighter('Aurora', window.plugin.aurora.highlighter);
 //    window.addHook('portalDetailsUpdated', window.plugin.aurora.onPortalDetailsUpdated);
 //    window.addHook('iitcLoaded', window.plugin.aurora.registerFieldForSyncing);
