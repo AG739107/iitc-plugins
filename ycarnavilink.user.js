@@ -222,6 +222,7 @@ function wrapper(plugin_info) {
   /**
    * HIGHLIGHTER
    */
+  /*
   window.plugin.aurora.highlighter = {
     highlight: function (data) {
       var guid = data.portal.options.ent[0];
@@ -291,6 +292,7 @@ function wrapper(plugin_info) {
       window.plugin.aurora.isHighlightActive = active;
     }
   };
+  */
 
   window.plugin.aurora.setupCSS = function () {
     $('<style>')
