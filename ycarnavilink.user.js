@@ -2,11 +2,11 @@
 // @id             iitc-plugin-yahoo-CarNavi-link
 // @name           IITC plugin: yahoo CarNavi link
 // @category       Misc
-// @version        0.0.1.20200925.213200
+// @version        0.0.1.20210201.122900
 // @namespace      rawdata
 // @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
 // @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
-// @description    [iitc-2020-09-25-213200] This is the first release.
+// @description    [iitc-2021-02-01-122900] This is the first release.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
@@ -26,8 +26,8 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //PLUGIN AUTHORS: writing a plugin outside of the IITC build environment? if so, delete these lines!!
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
-plugin_info.dateTimeVersion = '20170108.21732';
-plugin_info.pluginId = 'debug-raw-portal-data';
+plugin_info.dateTimeVersion = '20210201.122900';
+plugin_info.pluginId = 'mics-yahoo-carnavi';
 //END PLUGIN AUTHORS NOTE
 
 
@@ -42,7 +42,7 @@ window.plugin.rawdata.setupCallback = function() {
 }
 
 window.plugin.rawdata.addLink = function(d) {
-  $('.linkdetails').append('<aside><a onclick="yjcarnavi://navi/select?point=current&point=35.923515,136.4225">Yカーナビ</a></aside>');
+  $('.linkdetails').append('<aside><a onclick="https://map.yahoo.co.jp/place?lat=35.89065&lon=136.22162&zoom=18&maptype=satellite">Yカーナビ</a></aside>');
 /*  $('.linkdetails').append('<aside><a href="'
   + window.plugin.rawdata.showPortalData(window.selectedPortal)
   + '">Yカーナビ</a></aside>'); */
