@@ -42,10 +42,10 @@ window.plugin.rawdata.setupCallback = function() {
 }
 
 window.plugin.rawdata.addLink = function(d) {
-  $('.linkdetails').append('<aside><a onclick="https://map.yahoo.co.jp/place?lat=35.89065&lon=136.22162&zoom=18&maptype=satellite">Yカーナビ</a></aside>');
-/*  $('.linkdetails').append('<aside><a href="'
+/*  $('.linkdetails').append('<aside><a onclick="https://map.yahoo.co.jp/place?lat=35.89065&lon=136.22162&zoom=18&maptype=satellite">Yカーナビ</a></aside>'); */
+  $('.linkdetails').append('<aside><a href="'
   + window.plugin.rawdata.showPortalData(window.selectedPortal)
-  + '">Yカーナビ</a></aside>'); */
+  + '">Yカーナビ</a></aside>');
 }
 
 window.plugin.rawdata.showPortalData = function(guid) {
