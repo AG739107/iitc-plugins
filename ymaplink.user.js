@@ -27,7 +27,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
 plugin_info.dateTimeVersion = '20210201.122900';
-plugin_info.pluginId = 'mics-yahoo-map-link';
+plugin_info.pluginId = 'misc-yahoo-map-link';
 //END PLUGIN AUTHORS NOTE
 
 
