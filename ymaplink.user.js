@@ -1,11 +1,11 @@
 // ==UserScript==
-// @id             iitc-plugin-yahoo-CarNavi-link
-// @name           IITC plugin: yahoo CarNavi link
+// @id             iitc-plugin-yahoo-Map-link
+// @name           IITC plugin: yahoo Map link
 // @category       Misc
 // @version        0.0.1.20210201.122900
-// @namespace      rawdata
-// @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
-// @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ycarnavilink.user.js
+// @namespace      ymap
+// @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ymaplink.user.js
+// @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ymaplink.user.js
 // @description    [iitc-2021-02-01-122900] This is the first release.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
@@ -27,7 +27,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
 plugin_info.dateTimeVersion = '20210201.122900';
-plugin_info.pluginId = 'mics-yahoo-carnavi';
+plugin_info.pluginId = 'mics-yahoo-map';
 //END PLUGIN AUTHORS NOTE
 
 
@@ -35,20 +35,19 @@ plugin_info.pluginId = 'mics-yahoo-carnavi';
 // PLUGIN START ////////////////////////////////////////////////////////
 
 // use own namespace for plugin
-window.plugin.rawdata = function() {};
+window.plugin.ymap = function() {};
 
-window.plugin.rawdata.setupCallback = function() {
-    addHook('portalDetailsUpdated', window.plugin.rawdata.addLink);
+window.plugin.ymap.setupCallback = function() {
+    addHook('portalDetailsUpdated', window.plugin.ymap.addLink);
 }
 
-window.plugin.rawdata.addLink = function(d) {
-/*  $('.linkdetails').append('<aside><a onclick="https://map.yahoo.co.jp/place?lat=35.89065&lon=136.22162&zoom=18&maptype=satellite">Yカーナビ</a></aside>'); */
+window.plugin.ymap.addLink = function(d) {
   $('.linkdetails').append('<aside><a href="'
-  + window.plugin.rawdata.showPortalData(window.selectedPortal)
-  + '">Yカーナビ</a></aside>');
+  + window.plugin.ymap.showPortalData(window.selectedPortal)
+  + '">Yahoo!地図</a></aside>');
 }
 
-window.plugin.rawdata.showPortalData = function(guid) {
+window.plugin.ymap.showPortalData = function(guid) {
   if (!window.portals[guid]) {
     console.warn ('Error: failed to find portal details for guid '+guid+' - failed to show debug data');
     return;
@@ -56,19 +55,19 @@ window.plugin.rawdata.showPortalData = function(guid) {
 
   var latlng = window.portals[guid].getLatLng();
   var {lat, lng} = latlng;
-  var ycarnaviUrl = 'yjcarnavi://navi/select?point=current&point=' + lat + ',' + lng;
-  return ycarnaviUrl;
+  var ymapUrl = 'https://map.yahoo.co.jp/place?lat=' + lat + '&lon=' + lng + '&zoom=18&maptype=satellite';
+  return ymapUrl;
 }
 
 var setup = function () {
-  window.plugin.rawdata.setupCallback();
+  window.plugin.ymap.setupCallback();
   $('head').append('<style>' +
-      '.ui-dialog-rawdata {' +
+      '.ui-dialog-ymap {' +
         'width: auto !important;' +
         'min-width: 400px !important;' +
         //'max-width: 600px !important;' +
     '}' +
-      '#dialog-rawdata {' +
+      '#dialog-ymap {' +
         'overflow-x: auto;' +
         'overflow-y: auto;' +
     '}' +
