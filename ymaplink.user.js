@@ -3,7 +3,7 @@
 // @name           IITC plugin: yahoo Map link
 // @category       Misc
 // @version        0.0.1.20210201.122900
-// @namespace      ymap
+// @namespace      ymaplink
 // @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ymaplink.user.js
 // @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/ymaplink.user.js
 // @description    [iitc-2021-02-01-122900] This is the first release.
@@ -27,7 +27,7 @@ if(typeof window.plugin !== 'function') window.plugin = function() {};
 //(leaving them in place might break the 'About IITC' page or break update checks)
 plugin_info.buildName = 'iitc';
 plugin_info.dateTimeVersion = '20210201.122900';
-plugin_info.pluginId = 'mics-yahoo-map';
+plugin_info.pluginId = 'mics-yahoo-map-link';
 //END PLUGIN AUTHORS NOTE
 
 
@@ -35,19 +35,19 @@ plugin_info.pluginId = 'mics-yahoo-map';
 // PLUGIN START ////////////////////////////////////////////////////////
 
 // use own namespace for plugin
-window.plugin.ymap = function() {};
+window.plugin.ymaplink = function() {};
 
-window.plugin.ymap.setupCallback = function() {
-    addHook('portalDetailsUpdated', window.plugin.ymap.addLink);
+window.plugin.ymaplink.setupCallback = function() {
+    addHook('portalDetailsUpdated', window.plugin.ymaplink.addLink);
 }
 
-window.plugin.ymap.addLink = function(d) {
+window.plugin.ymaplink.addLink = function(d) {
   $('.linkdetails').append('<aside><a href="'
-  + window.plugin.ymap.showPortalData(window.selectedPortal)
+  + window.plugin.ymaplink.showPortalData(window.selectedPortal)
   + '">Yahoo!地図</a></aside>');
 }
 
-window.plugin.ymap.showPortalData = function(guid) {
+window.plugin.ymaplink.showPortalData = function(guid) {
   if (!window.portals[guid]) {
     console.warn ('Error: failed to find portal details for guid '+guid+' - failed to show debug data');
     return;
@@ -60,14 +60,14 @@ window.plugin.ymap.showPortalData = function(guid) {
 }
 
 var setup = function () {
-  window.plugin.ymap.setupCallback();
+  window.plugin.ymaplink.setupCallback();
   $('head').append('<style>' +
-      '.ui-dialog-ymap {' +
+      '.ui-dialog-ymaplink {' +
         'width: auto !important;' +
         'min-width: 400px !important;' +
         //'max-width: 600px !important;' +
     '}' +
-      '#dialog-ymap {' +
+      '#dialog-ymaplink {' +
         'overflow-x: auto;' +
         'overflow-y: auto;' +
     '}' +
