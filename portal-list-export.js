@@ -1,14 +1,14 @@
 // ==UserScript==
-// @id             iitc-plugin-ingressdualmap-exporter@OllieTerrance
-// @name           IITC plugin: Ingress Dual Map Exporter
-// @category       Keys
+// @id             iitc-plugin-portal-list-export
+// @name           IITC plugin: Ingress Portal List Exporter
+// @category       MICS
 // @version        0.0.0.1
-// @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @description    Exports portals currently in view as a CSV list for use with Ingress Dual Map.
-// @include        https://www.ingress.com/intel*
-// @include        http://www.ingress.com/intel*
-// @match          https://www.ingress.com/intel*
-// @match          http://www.ingress.com/intel*
+// @namespace      https://github.com/AG739107/iitc-plugins/
+// @description    Exports portals currently in view as a CSV list.
+// @include        https://*.ingress.com/intel*
+// @include        http://*.ingress.com/intel*
+// @match          https://*.ingress.com/intel*
+// @match          http://*.ingress.com/intel*
 // @grant          none
 // ==/UserScript==
 
