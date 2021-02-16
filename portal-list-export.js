@@ -1,14 +1,20 @@
 // ==UserScript==
 // @id             iitc-plugin-portal-list-export
-// @name           IITC plugin: Ingress Portal List Exporter
-// @category       MICS
-// @version        0.0.0.1
-// @namespace      https://github.com/AG739107/iitc-plugins/
-// @description    Exports portals currently in view as a CSV list.
+// @name           IITC plugin: ingress Portal List Exporter
+// @category       Misc
+// @version        0.0.1.20210216.210000
+// @namespace      Portal-Export-CSV
+// @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/portal-list-export.js
+// @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/portal-list-export.js
+// @description    [iitc-2021-02-16-210000] This is the first release.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
 // @match          https://*.ingress.com/intel*
 // @match          http://*.ingress.com/intel*
+// @include        https://*.ingress.com/mission/*
+// @include        http://*.ingress.com/mission/*
+// @match          https://*.ingress.com/mission/*
+// @match          http://*.ingress.com/mission/*
 // @grant          none
 // ==/UserScript==
 
