@@ -45,7 +45,7 @@ window.plugin.crossLinks.greatCircleArcIntersect = function(a0,a1,b0,b1) {
   // check to ensure no line segment is zero length - if so, cannot cross
   // check to see if either of the lines start/end at the same point. if so, then they cannot cross
   // check to see if the line segments overlap in longitude. if not, no crossing
-  // if overlap, clip each line to the overlapping longitudes, then see if latitudes cross 
+  // if overlap, clip each line to the overlapping longitudes, then see if latitudes cross
 
   // anti-meridian handling. this code will not sensibly handle a case where one point is
   // close to -180 degrees and the other +180 degrees. unwrap coordinates in this case, so one point
@@ -279,7 +279,7 @@ window.plugin.crossLinks.testForDeletedLinks = function () {
 window.plugin.crossLinks.createLayer = function() {
     window.plugin.crossLinks.linkLayer = new L.FeatureGroup();
     window.plugin.crossLinks.linkLayerGuids={};
-    window.addLayerGroup('Cross Links', window.plugin.crossLinks.linkLayer, true);
+    window.addLayerGroup('Cross Lines', window.plugin.crossLinks.linkLayer, true);
 
     map.on('layeradd', function(obj) {
       if(obj.layer === window.plugin.crossLinks.linkLayer) {
@@ -326,7 +326,7 @@ var setup = function() {
     window.addHook('linkAdded', window.plugin.crossLinks.onLinkAdded);
     window.addHook('mapDataRefreshEnd', window.plugin.crossLinks.onMapDataRefreshEnd);
 
-    
+
 }
 
 // PLUGIN END //////////////////////////////////////////////////////////
