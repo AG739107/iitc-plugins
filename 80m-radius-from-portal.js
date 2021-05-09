@@ -4,8 +4,8 @@
 // @category       Misc
 // @version        0.1.0.20210310.234500
 // @namespace      x80mradius
-// @updateURL      https://static.iitc.me/build/release/plugins/80m-radius-from-portal.js
-// @downloadURL    https://static.iitc.me/build/release/plugins/80m-radius-from-portal.js
+// @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/80m-radius-from-portal.js
+// @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/80m-radius-from-portal.js
 // @description    [iitc-2021-03-10-234500] This is the first release.
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
