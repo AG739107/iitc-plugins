@@ -4,9 +4,9 @@
 // @category       Portal Info
 // @version        0.0.4.1
 // @namespace      https://github.com/jonatkins/ingress-intel-total-conversion
-// @updateURL      https://tarmn3.bitbucket.io/files/IITC_plugin-Portal_Info_to_paste.user.js
-// @downloadURL    https://tarmn3.bitbucket.io/files/IITC_plugin-Portal_Info_to_paste.user.js
-// @author         tarmn3
+// @updateURL      https://raw.githubusercontent.com/AG739107/iitc-plugins/master/Portal%20Info%20to%20paste(Agent739107)
+// @downloadURL    https://raw.githubusercontent.com/AG739107/iitc-plugins/master/Portal%20Info%20to%20paste(Agent739107)
+// @author         agent739107
 // @description    make it easy to copy and paste portal name and intel url
 // @include        https://*.ingress.com/intel*
 // @include        http://*.ingress.com/intel*
